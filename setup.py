@@ -65,7 +65,10 @@ try:
 except ImportError:
     warnings.warn("Cannot compile native C code, because of a missing build dependency")
     _ABLE_TO_COMPILE_EXTENSIONS = False
-
+    # temp to see what fails to import
+    raise
+    
+    
 if _ABLE_TO_COMPILE_EXTENSIONS:
 
     extensions = cythonize(
